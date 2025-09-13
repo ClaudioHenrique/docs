@@ -1,33 +1,24 @@
 ---
-title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+title: 'Referência da API Fortuna Pay'
+description: 'Documentação completa dos endpoints da API Fortuna Pay'
 ---
 
 <Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
+  Esta documentação mostra como utilizar os endpoints da API Fortuna Pay, incluindo autenticação e exemplos de requisição/resposta.
 </Note>
 
-## Welcome
+## Introdução
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+A API da Fortuna Pay permite gerenciar cobranças via PIX, consultar status de transações e integrar pagamentos em sistemas externos de forma segura e rápida.  
 
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
+Para este guia, todos os endpoints são autenticados usando tokens Bearer.  
 
-## Authentication
+## Autenticação
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+Todos os endpoints exigem **Bearer Token** no header `Authorization`.  
 
-```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
-```
+Exemplo de header:
+
+```http
+Authorization: Bearer SEU_TOKEN_AQUI
+Content-Type: application/json
