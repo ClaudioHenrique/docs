@@ -1,97 +1,33 @@
 ---
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
+title: 'Introdução'
+description: 'Seção inicial para apresentar a API Fortuna Pay'
 ---
 
-## Setting up
+<Note>
+  Esta seção apresenta os conceitos iniciais da API Fortuna Pay. Se você não deseja incluir a documentação de referência da API, pode remover esta pasta.
+</Note>
 
-Get your documentation site up and running in minutes.
+## Bem-vindo à API Fortuna Pay
 
-<Card
-  title="Start here"
-  icon="rocket"
-  href="/quickstart"
-  horizontal
->
-  Follow our three step quickstart guide.
-</Card>
+A API Fortuna Pay permite integrar pagamentos via PIX de forma rápida e segura, consultando cobranças, transações e gerando QR Codes programaticamente.  
 
-## Make it yours
-
-Design a docs site that looks great and empowers your users.
-
-<Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
-  </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
-  </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
-  </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
-  </Card>
-</Columns>
-
-## Create beautiful pages
-
-Everything you need to create world-class documentation.
-
-<Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
-  </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
-  </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
-  </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
-  </Card>
-</Columns>
-
-## Need inspiration?
+Existem duas formas de documentar a API: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) e [componentes MDX](https://mintlify.com/docs/api-playground/mdx/configuration). Para esta documentação, utilizamos a especificação **OpenAPI**.
 
 <Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
+  title="Especificação da API Fortuna Pay"
+  icon="credit-card"
+  href="https://github.com/seu-usuario/fortunapay-api/blob/main/api-reference/openapi.json"
 >
-  Browse our showcase of exceptional documentation sites.
+  Visualizar o arquivo OpenAPI completo
 </Card>
+
+## Autenticação
+
+Todos os endpoints exigem autenticação via **Bearer Token**, conforme definido na especificação.
+
+```json
+"security": [
+  {
+    "bearerAuth": []
+  }
+]
