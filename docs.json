@@ -11,7 +11,7 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Guia",
+        "tab": "Guides",
         "groups": [
           {
             "group": "Primeiros Passos",
@@ -23,47 +23,23 @@
         ]
       },
       {
-        "tab": "Referência da API",
+        "tab": "API reference",
         "groups": [
           {
-            "group": "Documentação da API",
+            "group": "API documentation",
             "pages": [
               "api-reference/introduction"
             ]
           },
           {
-  "navigation": {
-    "tabs": [
-      {
-        "group": "Conta",
-        "pages": [
-          "api-reference/endpoint/get"
-        ]
-      },
-      {
-        "group": "Pix",
-        "pages": [
-          "api-reference/pix/charges",
-          "api-reference/pix/send",
-          "api-reference/pix/status"
-        ]
-      },
-      {
-        "group": "DICT",
-        "pages": [
-          "api-reference/dict/dict"
-        ]
-      },
-      {
-        "group": "Extrato",
-        "pages": [
-          "api-reference/extrato/statements"
-        ]
-      }
-    ]
-  }
-}
-
+            "group": "Endpoint examples",
+            "pages": [
+              "api-reference/endpoint/get",
+              "api-reference/endpoint/create",
+              "api-reference/endpoint/delete",
+              "api-reference/endpoint/webhook"
+            ]
+          }
         ]
       }
     ]
