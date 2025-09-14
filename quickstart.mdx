@@ -31,9 +31,9 @@ Depois que sua conta for aprovada:
 
 Com o token em mãos, você já pode fazer requisições aos endpoints, como:
 
-- Criar cobrança PIX: `/pix/cob`
-- Consultar status de cobrança: `/pix/cob/{txid}`
-- Consultar transações: `/pix/transaction/{id}`
+- Criar cobrança PIX: `/v1/pix/charges`
+- Enviar PIX: `/v1/pix/send`
+- Consultar status de cobrança: `/v1/pix/status/{transaction_id}`
 
 Exemplo de header com autenticação:
 
