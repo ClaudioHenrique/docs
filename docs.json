@@ -32,14 +32,38 @@
             ]
           },
           {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
-          }
+  "navigation": {
+    "tabs": [
+      {
+        "group": "Conta",
+        "pages": [
+          "api-reference/conta/me"
+        ]
+      },
+      {
+        "group": "Pix",
+        "pages": [
+          "api-reference/pix/charges",
+          "api-reference/pix/send",
+          "api-reference/pix/status"
+        ]
+      },
+      {
+        "group": "DICT",
+        "pages": [
+          "api-reference/dict/dict"
+        ]
+      },
+      {
+        "group": "Extrato",
+        "pages": [
+          "api-reference/extrato/statements"
+        ]
+      }
+    ]
+  }
+}
+
         ]
       }
     ]
