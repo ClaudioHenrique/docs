@@ -23,12 +23,12 @@
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Referência da API",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Documentação da API",
             "pages": [
-              "api-reference/introduction"
+              "api/introducao"
             ]
           },
           {
