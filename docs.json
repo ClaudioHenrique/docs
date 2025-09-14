@@ -37,7 +37,7 @@
       {
         "group": "Conta",
         "pages": [
-          "api-reference/conta/me"
+          "api-reference/endpoint/get"
         ]
       },
       {
