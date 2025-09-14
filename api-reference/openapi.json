@@ -19,6 +19,54 @@
     }
   ],
   "paths": {
+    "/auth": {
+      "post": {
+        "description": "Obtém um token JWT a partir das chaves da API",
+        "requestBody": {
+          "description": "Credenciais da API (API Key e Secret)",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Token JWT gerado com sucesso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Credenciais inválidas",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Muitas tentativas (limite de 10 por minuto)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/pix/charges": {
       "post": {
         "description": "Cria uma nova cobrança Pix",
@@ -237,6 +285,22 @@
   },
   "components": {
     "schemas": {
+      "AuthRequest": {
+        "type": "object",
+        "required": ["api_key", "api_secret"],
+        "properties": {
+          "api_key": { "type": "string" },
+          "api_secret": { "type": "string" }
+        }
+      },
+      "AuthResponse": {
+        "type": "object",
+        "properties": {
+          "access_token": { "type": "string" },
+          "token_type": { "type": "string", "example": "Bearer" },
+          "expires_in": { "type": "integer", "example": 3600 }
+        }
+      },
       "PixChargeRequest": {
         "type": "object",
         "required": ["amount", "payer"],
