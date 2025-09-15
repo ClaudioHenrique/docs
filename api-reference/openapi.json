@@ -160,7 +160,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Status da transação retornado",
+            "description": "Detalhes da transação retornado",
             "content": {
               "application/json": {
                 "schema": {
@@ -339,9 +339,16 @@
       "PixTransactionStatus": {
         "type": "object",
         "properties": {
-          "txid": { "type": "string" },
+          "transaction_id": { "type": "string" },
+          "qr_code" : { "type": "string" },
+          "image" :  { "type": "string" },
+          "transaction_amount" : { "type": "number" },
+          "transaction_total" : { "type": "number" },
           "status": { "type": "string" },
           "amount": { "type": "number", "format": "float" },
+          "paid" : { "type" : "integer"},
+          "end2end_id" : { "type" : "string"},
+          "transaction_reference" : { "type" : "string"},
           "timestamp": { "type": "string", "format": "date-time" }
         }
       },
