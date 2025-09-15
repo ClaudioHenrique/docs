@@ -364,9 +364,9 @@
       "PixDictResponse": {
         "type": "object",
         "properties": {
-          "key_type": { "type": "string" },
-          "bank_code": { "type": "string" },
-          "owner_name": { "type": "string" }
+          "payee": { "type": "object" },
+          "dictKey": { "type": "string" },
+          "endToEndId": { "type": "string" }
         }
       },
       "StatementResponse": {
