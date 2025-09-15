@@ -44,6 +44,12 @@
               "api-reference/endpoint/charge",
               "api-reference/endpoint/send"
             ]
+          },
+          {
+            "group": "DICT",
+            "pages": [
+              "api-reference/endpoint/dict"
+            ]
           }
         ]
       }
