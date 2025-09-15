@@ -37,6 +37,13 @@
               "api-reference/endpoint/auth",
               "api-reference/endpoint/me"
             ]
+          },
+          {
+            "group": "Pix",
+            "pages": [
+              "api-reference/endpoint/charge",
+              "api-reference/endpoint/send"
+            ]
           }
         ]
       }
