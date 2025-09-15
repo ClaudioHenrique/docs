@@ -42,7 +42,8 @@
             "group": "Pix",
             "pages": [
               "api-reference/endpoint/charge",
-              "api-reference/endpoint/send"
+              "api-reference/endpoint/send",
+              "api-reference/endpoint/status"
             ]
           },
           {
