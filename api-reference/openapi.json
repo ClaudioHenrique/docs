@@ -10,7 +10,7 @@
   },
   "servers": [
     {
-      "url": "https://api.fortunapay.com.br"
+      "url": "https://api.fortunapay.com.br/v1"
     }
   ],
   "security": [
