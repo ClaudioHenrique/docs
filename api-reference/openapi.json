@@ -321,19 +321,23 @@
       },
       "PixSendRequest": {
         "type": "object",
-        "required": ["txid", "recipient"],
+        "required": ["amount", "key", "unique_id"],
         "properties": {
-          "txid": { "type": "string" },
-          "recipient": { "type": "string" },
-          "amount": { "type": "number", "format": "float" }
+          "amount": { "type": "number" },
+          "key": { "type": "string" },
+          "unique_id" : { "type": "string" },
+          "doc" : { "type": "string" }
         }
       },
       "PixSendResponse": {
         "type": "object",
         "properties": {
-          "txid": { "type": "string" },
+          "code": { "type": "integer" },
+          "message" : { "type" : "string"},
+          "transaction_id": { "type": "string" },
           "status": { "type": "string" },
-          "processed_at": { "type": "string", "format": "date-time" }
+          "end2end_id" : { "type" : "string"},
+          "transaction": { "type": "object"}
         }
       },
       "PixTransactionStatus": {
