@@ -373,10 +373,18 @@
         "items": {
           "type": "object",
           "properties": {
-            "date": { "type": "string", "format": "date-time" },
-            "description": { "type": "string" },
-            "amount": { "type": "number", "format": "float" },
-            "type": { "type": "string" }
+            "current_page": { "type": "integer" },
+            "data": { "type": "object" },
+            "first_page_url": { "type": "string" },
+            "from": { "type": "integer" },
+            "last_page": { "type": "integer" },
+            "last_page_url": { "type": "string" },
+            "next_page_url": { "type": "string" },
+            "path": { "type": "string" },
+            "per_page": { "type": "integer" },
+            "prev_page_url": { "type": "string" },
+            "to": { "type": "integer" },
+            "total": { "type": "integer" }
           }
         }
       },
