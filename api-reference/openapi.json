@@ -304,19 +304,23 @@
       },
       "PixChargeRequest": {
         "type": "object",
-        "required": ["amount", "payer"],
+        "required": ["amount"],
         "properties": {
           "amount": { "type": "number", "format": "float" },
-          "payer": { "type": "string" },
-          "description": { "type": "string" }
+          "expire": { "type": "number" }
         }
       },
       "PixChargeResponse": {
         "type": "object",
         "properties": {
-          "txid": { "type": "string" },
-          "status": { "type": "string" },
-          "expires_at": { "type": "string", "format": "date-time" }
+          "code": { "type": "integer" },
+          "message": { "type": "string" },
+          "transaction_id": { "type": "string" },
+          "qr_code" :  { "type": "string" },
+          "image" : { "type": "string" },
+          "amount" : { "type": "number" },
+          "status" : { "type": "string" },
+          "created_at": { "type": "string", "format": "date-time" }
         }
       },
       "PixSendRequest": {
