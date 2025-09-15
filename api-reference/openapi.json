@@ -330,7 +330,7 @@
           "amount": { "type": "number" },
           "key": { "type": "string",  "description": "Chave PIX que deseja enviar o pagamento"},
           "unique_id" : { "type": "string", "description": "Código único do seu sistema para evitar envio duplicado"},
-          "doc" : { "type": "string", "description": "Campo opicional para garantir que a Chave PIX informada pertence ao respectivo documento"}
+          "doc" : { "type": "string", "description": "Campo opcional para verificar a correspondência entre a chave Pix e o documento do titular."}
         }
       },
       "PixSendResponse": {
