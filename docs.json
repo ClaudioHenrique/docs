@@ -2,6 +2,9 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "Fortuna Pay",
+  "i18n": {
+    "tocTitle": "Nesta página"
+  },
   "colors": {
     "primary": "#FFC501",
     "light": "#07C983",
