@@ -22,6 +22,7 @@
     "/auth": {
       "post": {
         "description": "Obtém um token JWT a partir das chaves da API",
+        "security": [], 
         "requestBody": {
           "description": "Credenciais da API (API Key e Secret)",
           "required": true,
