@@ -307,7 +307,7 @@
         "required": ["amount"],
         "properties": {
           "amount": { "type": "number", "format": "float" },
-          "expire": { "type": "number" }
+          "expire": { "type": "number", "description": "Tempo de expiração em segundos"}
         }
       },
       "PixChargeResponse": {
