@@ -216,6 +216,7 @@
           {
             "name": "start",
             "in": "query",
+            "required": true,
             "description": "Data de início do extrato (YYYY-MM-DD)",
             "schema": {
               "type": "string",
