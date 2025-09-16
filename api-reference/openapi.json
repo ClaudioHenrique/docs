@@ -144,7 +144,7 @@
         }
       }
     },
-    "/pix/status/{transaction_id}": {
+    "/status/{transaction_id}": {
       "get": {
         "description": "Consulta o status de uma transação Pix",
         "parameters": [
