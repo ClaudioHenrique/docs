@@ -43,6 +43,13 @@
             ]
           },
           {
+            "group": "Retirada",
+            "pages": [
+              "api-reference/endpoint/withdraw",
+              "api-reference/endpoint/withdraw-add"
+            ]
+          },
+          {
             "group": "Pix",
             "pages": [
               "api-reference/endpoint/charge",
