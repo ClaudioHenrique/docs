@@ -454,6 +454,7 @@
       },
       "WithdrawAddRequest": {
         "type": "object",
+        "required": ["key"],
         "properties": {
           "key": { "type": "string" }
         }
