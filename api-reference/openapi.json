@@ -322,44 +322,44 @@
         }
       }
     },
-
-   "/withdraw/add": {
-    "post": {
-      "description": "Adicionar chave PIX para realizar retirada de saldo",
-      "requestBody": {
-        "required": true,
-        "description": "Dados da chave PIX a ser cadastrada",
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/WithdrawAddRequest"
-            }
-          }
-        }
-      },
-      "responses": {
-        "200": {
-          "description": "Chave PIX adicionada com sucesso",
+    "/withdraw/add": {
+      "post": {
+        "description": "Adicionar chave PIX para realizar retirada de saldo",
+        "requestBody": {
+          "required": true,
+          "description": "Dados da chave PIX a ser cadastrada",
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/WithdrawAddResponse"
+                "$ref": "#/components/schemas/WithdrawAddRequest"
               }
             }
           }
         },
-        "400": {
-          "description": "Erro ao adicionar chave PIX",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Error"
+        "responses": {
+          "200": {
+            "description": "Chave PIX adicionada com sucesso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WithdrawAddResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Erro ao adicionar chave PIX",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
               }
             }
           }
         }
       }
-  },
+    },
   "components": {
     "schemas": {
       "AuthRequest": {
