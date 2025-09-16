@@ -304,7 +304,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/WithdrawResponse"
+                  "$ref": "#/components/schemas/PixSendResponse"
                 }
               }
             }
