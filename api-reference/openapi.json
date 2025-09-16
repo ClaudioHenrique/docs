@@ -285,7 +285,7 @@
       }
     },
     "/withdraw": {
-      "get": {
+      "post": {
         "description": "Processa retirada para a conta bancária externa do Titular da Conta",
         "responses": {
           "200": {
@@ -312,7 +312,7 @@
       }
     },
     "/withdraw/add": {
-      "get": {
+      "post": {
         "description": "Adiciona conta bancária externa para retirada",
         "responses": {
           "200": {
