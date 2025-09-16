@@ -46,14 +46,19 @@
             "group": "Pix",
             "pages": [
               "api-reference/endpoint/charge",
-              "api-reference/endpoint/send",
-              "api-reference/endpoint/status"
+              "api-reference/endpoint/send"
             ]
           },
           {
             "group": "DICT",
             "pages": [
               "api-reference/endpoint/dict"
+            ]
+          },
+          {
+            "group": "Status",
+            "pages": [
+              "api-reference/endpoint/status"
             ]
           }
         ]
