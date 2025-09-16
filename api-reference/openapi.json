@@ -286,7 +286,7 @@
     },
     "/withdraw": {
       "post": {
-        "description": "Processa retirada para a conta bancária externa do Titular da Conta",
+        "description": "Processa retirada para chave PIX previamente cadastrada do Titular da Conta",
         "responses": {
           "200": {
             "description": "Dados da conta retornados",
