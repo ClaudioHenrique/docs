@@ -497,6 +497,74 @@
           }
         }
       },
+      "WithdrawAddResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "pixkey_123456",
+            "description": "Identificador interno da chave cadastrada"
+          },
+          "key": {
+            "type": "string",
+            "example": "user@email.com",
+            "description": "Chave PIX cadastrada pelo usuário"
+          },
+          "type": {
+            "type": "string",
+            "example": "EMAIL",
+            "description": "Tipo da chave PIX (CPF, CNPJ, EMAIL, TELEFONE, EVP)"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["ACTIVE", "INACTIVE"],
+            "example": "ACTIVE",
+            "description": "Status da chave cadastrada"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2025-09-16T15:30:00Z"
+          }
+        }
+      },
+      "WithdrawResponse": {
+        "type": "object",
+        "properties": {
+          "transaction_id": {
+            "type": "string",
+            "example": "wd_987654321",
+            "description": "ID único da transação de retirada"
+          },
+          "amount": {
+            "type": "number",
+            "format": "float",
+            "example": 250.75,
+            "description": "Valor da retirada"
+          },
+          "currency": {
+            "type": "string",
+            "example": "BRL"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["PENDING", "PROCESSING", "COMPLETED", "FAILED"],
+            "example": "PROCESSING",
+            "description": "Status atual da retirada"
+          },
+          "pix_key": {
+            "type": "string",
+            "example": "user@email.com",
+            "description": "Chave PIX utilizada na retirada"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2025-09-16T15:30:00Z"
+          }
+        }
+      },
+
       "Error": {
         "type": "object",
         "required": ["error", "message"],
