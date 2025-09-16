@@ -299,7 +299,7 @@
             }
           },
           "400": {
-            "description": "Erro ao consultar dados do usuário",
+            "description": "Erro ao realizar o processamento da retirada",
             "content": {
               "application/json": {
                 "schema": {
