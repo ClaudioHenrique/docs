@@ -323,33 +323,42 @@
       }
     },
 
-    "/withdraw/add": {
-      "post": {
-        "description": "Adicionar chave PIX para realizar retirada de saldo",
-        "requestBody": {
-          "200": {
-            "description": "Dados da conta retornados",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/WithdrawAddRequest"
-                }
+   "/withdraw/add": {
+    "post": {
+      "description": "Adicionar chave PIX para realizar retirada de saldo",
+      "requestBody": {
+        "required": true,
+        "description": "Dados da chave PIX a ser cadastrada",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/WithdrawAddRequest"
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "Chave PIX adicionada com sucesso",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WithdrawAddResponse"
               }
             }
-          },
-          "400": {
-            "description": "Erro ao consultar dados do usuário",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
+          }
+        },
+        "400": {
+          "description": "Erro ao adicionar chave PIX",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Error"
               }
             }
           }
         }
       }
-    }
   },
   "components": {
     "schemas": {
