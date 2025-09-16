@@ -283,6 +283,60 @@
           }
         }
       }
+    },
+    "/withdraw": {
+      "get": {
+        "description": "Processa retirada para a conta bancária externa do Titular da Conta",
+        "responses": {
+          "200": {
+            "description": "Dados da conta retornados",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Withdraw"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Erro ao consultar dados do usuário",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/withdraw/add": {
+      "get": {
+        "description": "Adiciona conta bancária externa para retirada",
+        "responses": {
+          "200": {
+            "description": "Dados da conta retornados",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WithdrawAdd"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Erro ao consultar dados do usuário",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -396,6 +450,18 @@
           "name": { "type": "string" },
           "email": { "type": "string" },
           "created_at": { "type": "string", "format": "date-time" }
+        }
+      },
+      "WithdrawAdd": {
+        "type": "object",
+        "properties": {
+          "key": { "type": "string" }
+        }
+      },
+      "Withdraw": {
+        "type": "object",
+        "properties": {
+          "amount": { "type": "number" }
         }
       },
       "Error": {
