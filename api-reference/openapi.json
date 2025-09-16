@@ -284,33 +284,44 @@
         }
       }
     },
-    "/withdraw": {
-      "post": {
-        "description": "Processa retirada para chave PIX previamente cadastrada do Titular da Conta",
-        "requestBody": {
-          "200": {
-            "description": "Dados da conta retornados",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/WithdrawRequest"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Erro ao realizar o processamento da retirada",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
+   "/withdraw": {
+  "post": {
+    "description": "Processa retirada para chave PIX previamente cadastrada do Titular da Conta",
+    "requestBody": {
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "$ref": "#/components/schemas/WithdrawRequest"
           }
         }
       }
     },
+    "responses": {
+      "200": {
+        "description": "Dados da conta retornados",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/WithdrawResponse"
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Erro ao realizar o processamento da retirada",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      }
+    }
+  }
+},
+
     "/withdraw/add": {
       "post": {
         "description": "Adicionar chave PIX para realizar retirada de saldo",
