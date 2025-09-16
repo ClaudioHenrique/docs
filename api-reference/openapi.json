@@ -313,7 +313,7 @@
     },
     "/withdraw/add": {
       "post": {
-        "description": "Adiciona conta bancária externa para retirada",
+        "description": "Adicionar chave PIX para realizar retirada de saldo",
         "responses": {
           "200": {
             "description": "Dados da conta retornados",
