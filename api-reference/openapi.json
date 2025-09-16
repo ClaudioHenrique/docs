@@ -473,8 +473,19 @@
       },
       "WithdrawRequest": {
         "type": "object",
+        "required": ["amount"],
         "properties": {
-          "amount": { "type": "number" }
+          "amount": {
+            "type": "number",
+            "format": "float",
+            "example": 250.75,
+            "description": "Valor a ser retirado em reais (R$)"
+          },
+          "currency": {
+            "type": "string",
+            "example": "BRL",
+            "description": "Moeda da retirada"
+          }
         }
       },
       "Error": {
