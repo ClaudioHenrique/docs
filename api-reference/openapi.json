@@ -287,13 +287,13 @@
     "/withdraw": {
       "post": {
         "description": "Processa retirada para chave PIX previamente cadastrada do Titular da Conta",
-        "responses": {
+        "requestBody": {
           "200": {
             "description": "Dados da conta retornados",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Withdraw"
+                  "$ref": "#/components/schemas/WithdrawRequest"
                 }
               }
             }
@@ -314,13 +314,13 @@
     "/withdraw/add": {
       "post": {
         "description": "Adicionar chave PIX para realizar retirada de saldo",
-        "responses": {
+        "requestBody": {
           "200": {
             "description": "Dados da conta retornados",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/WithdrawAdd"
+                  "$ref": "#/components/schemas/WithdrawAddRequest"
                 }
               }
             }
@@ -452,13 +452,13 @@
           "created_at": { "type": "string", "format": "date-time" }
         }
       },
-      "WithdrawAdd": {
+      "WithdrawAddRequest": {
         "type": "object",
         "properties": {
           "key": { "type": "string" }
         }
       },
-      "Withdraw": {
+      "WithdrawRequest": {
         "type": "object",
         "properties": {
           "amount": { "type": "number" }
