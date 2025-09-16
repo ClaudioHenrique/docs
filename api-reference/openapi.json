@@ -490,11 +490,6 @@
             "format": "float",
             "example": 250.75,
             "description": "Valor a ser retirado em reais (R$)"
-          },
-          "currency": {
-            "type": "string",
-            "example": "BRL",
-            "description": "Moeda da retirada"
           }
         }
       },
