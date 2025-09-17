@@ -146,7 +146,7 @@
     },
     "/status/{transaction_id}": {
       "get": {
-        "description": "Consulta o status de uma transação Pix",
+        "description": "Consulta o status de uma transação: Cobrança, Envio e Retirada",
         "parameters": [
           {
             "name": "id",
